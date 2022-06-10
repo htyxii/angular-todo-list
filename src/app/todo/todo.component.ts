@@ -39,10 +39,10 @@ export class TodoComponent implements OnInit {
     value.completed === true ?
       this.taskList.push(this.taskList.splice(this.taskList.indexOf(value), 1)[0]) :
       this.taskList.unshift(this.taskList.splice(this.taskList.indexOf(value), 1)[0])
+      window.localStorage.setItem('task', JSON.stringify(this.taskList))
   }
   
 
-  
   showAll() {
     this.taskList = window.localStorage.getItem('task') ? JSON.parse(localStorage.getItem('task')) : []
   }
