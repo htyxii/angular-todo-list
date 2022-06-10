@@ -10,9 +10,9 @@
                 </button>
             </form>
             <div class="d-flex justify-content-center">
-            <button class="flex-no-shrink p-2 ml-4 mr-2 border-2 rounded text-primary border-primary hover:bg-green">All</button>
-            <button class="flex-no-shrink p-2 ml-4 mr-2 border-2 rounded text-danger border-danger hover:bg-green">Open</button>
-            <button class="flex-no-shrink p-2 ml-4 mr-2 border-2 rounded text-success border-success hover:bg-green">Done</button>
+            <button class="flex-no-shrink p-2 ml-4 mr-2 border-2 rounded text-primary border-primary hover:bg-green" (click)="showAll()">All</button>
+            <button class="flex-no-shrink p-2 ml-4 mr-2 border-2 rounded text-danger border-danger hover:bg-green" (click)="showOpen()">Open</button>
+            <button class="flex-no-shrink p-2 ml-4 mr-2 border-2 rounded text-success border-success hover:bg-green" (click)="showDone()">Done</button>
             </div>
         </div>
 

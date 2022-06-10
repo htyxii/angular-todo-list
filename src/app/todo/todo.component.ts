@@ -41,7 +41,21 @@ export class TodoComponent implements OnInit {
       this.taskList.unshift(this.taskList.splice(this.taskList.indexOf(value), 1)[0])
   }
   
+
   
+  showAll() {
+    this.taskList = window.localStorage.getItem('task') ? JSON.parse(localStorage.getItem('task')) : []
+  }
+  
+  showOpen() {
+    this.taskList = window.localStorage.getItem('task') ? JSON.parse(localStorage.getItem('task')) : []
+    this.taskList = this.taskList.filter(task => task.completed !== true)
+  }
+
+  showDone() {
+    this.taskList = window.localStorage.getItem('task') ? JSON.parse(localStorage.getItem('task')) : []
+    this.taskList = this.taskList.filter(task => task.completed === true)
+  }
 
   ngOnInit(): void {
     this.taskList = window.localStorage.getItem('task') ? JSON.parse(localStorage.getItem('task')) : []
